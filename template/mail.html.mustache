@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <title>Reporting #{{weekNumber}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+body{margin:0;padding:0;width:100% !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}.ReadMsgBody,.ExternalClass{width:100%;}.ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{line-height:100%;}#outlook a{padding:0;}img{border:0;display:block;max-width:100%;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;}a img{border:none;}table td{border-collapse:collapse;}#mbackground{margin:0;padding:0;line-height:100% !important;width:100% !important;}body,#mbackground{background-color:#eee;}.mwrapper{background-color:#fff;}@media only screen and (max-width: 500px){table[class="mwrapper"]{width:100% !important;}}
+</style>
+  </head>
+  <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="margin: 0; padding: 0; width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #eee;">
+    <center>
+      <table id="mbackground" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="margin: 0; padding: 0; line-height: 100%; width: 100%; background-color: #eee;">
+        <tr>
+          <td align="center" valign="top" style="border-collapse: collapse;">
+
+            <table class="mwrapper" width="500" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff;">
+              <tr>
+                <td colspan="3" height="10" bgcolor="#f1b95a" style="background: #f1b95a; border-collapse: collapse;" nowrap=""></td>
+              </tr>
+              <tr>
+                <td width="20" bgcolor="#f1b95a" style="background: #f1b95a; border-collapse: collapse;" nowrap=""></td>
+                <td align="left" valign="top" bgcolor="#f1b95a" style="background: #f1b95a; font-size: 16px; font-weight: bold; text-transform: uppercase; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color: #fff; border-collapse: collapse;">
+                  Reporting #{{weekNumber}}
+                </td>
+                <td width="20" bgcolor="#f1b95a" style="background: #f1b95a; border-collapse: collapse;" nowrap=""></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="10" bgcolor="#f1b95a" style="background: #f1b95a; border-collapse: collapse;" nowrap=""></td>
+              </tr>
+            </table>
+
+            <table class="mwrapper" width="500" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff;">
+              <tr>
+                <td colspan="3" height="20" bgcolor="#fff" style="background: #fff; border-collapse: collapse;" nowrap></td>
+              </tr>
+
+              {{#events}}
+                <tr>
+                  <td width="20" bgcolor="#fff" style="background:#fff;" nowrap></td>
+                  <td align="left" valign="top" bgcolor="#fff" style="background:#fff;font-size: 14px;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#313131;line-height:18px;">
+                    <span style="text-transform:uppercase;">
+                      <strong>{{label}}</strong> - <em>{{durationHumanized}}</em>
+                    </span>              
+                  </td>
+                  <td width="20" bgcolor="#fff" style="background:#fff;" nowrap></td>
+                </tr>
+                <tr>
+                  <td colspan="3" height="10" bgcolor="#fff" style="background:#fff;" nowrap></td>
+                </tr>
+              {{/events}}
+              
+              <tr>
+                <td colspan="3" height="15" bgcolor="#fff" style="background: #fff; border-collapse: collapse;" nowrap=""></td>
+              </tr>
+            </table>
+
+
+
+            <table class="mwrapper" width="500" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff;">
+              <tr>
+                <td colspan="3" height="10" bgcolor="#eeeeee" style="background: #eeeeee; border-collapse: collapse;" nowrap=""></td>
+              </tr>
+              <tr>
+                <td width="20" bgcolor="#eeeeee" style="background: #eeeeee; border-collapse: collapse;" nowrap=""></td>
+                <td align="center" valign="top" bgcolor="#fff" style="background: #eeeeee; font-size: 10px; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color: #313131; border-collapse: collapse;">
+                  This mail was sent with love from {{username}} &amp; <a href="#" style="color:#313131;">node-report</a>
+                </td>
+                <td width="20" bgcolor="#eeeeee" style="background: #eeeeee; border-collapse: collapse;" nowrap=""></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="10" bgcolor="#eeeeee" style="background: #eeeeee; border-collapse: collapse;" nowrap=""></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
+
