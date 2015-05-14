@@ -6,7 +6,7 @@ Node-reporting est un simple outils qui vous permet d'exporter votre calendrier 
 
 ## Version
 
-This script is still 
+This script is a draft and a "test-project" to play with node.js.
 
 ## Install
 
