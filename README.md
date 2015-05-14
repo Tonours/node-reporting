@@ -13,6 +13,7 @@ So yes it's not well commented.
 
 1. Clone this repo
 2. npm install
+3. Export your calendar at the root folder and name it calendar.ics
 3. node index.js
 4. Follow asked indications on terminal
 
