@@ -173,8 +173,9 @@ var questions = function createConfig(){
 */
 
 var extractData = function extractData(startDate, endDate, period, userName) {
-  // console.log(config.mail.user);
-  fs.readFile('./anthony.ics','utf8', function (err, calendar) {
+  
+
+  fs.readFile('./calendar.ics','utf8', function (err, calendar) {
     if (err) throw err;
 
     var ical = icalendar.parse_calendar(calendar);
@@ -250,7 +251,6 @@ var template = function template(events, username) {
   events.username = username || 'Anonymous';
   
 
-  console.log(events);
   if(events) {
     var template = __dirname + '/template/mail.html.mustache';
 
@@ -294,12 +294,6 @@ var sendMail = function sendMail(userMail, userPass, emailTo, userName) {
         subject: 'Reporting #'+moment().isoWeeks(),
         html: data,
         text: '',
-        // html: 'Embedded image: <img src="cid:unique@kreata.ee"/>',
-        // attachments: [{
-        //   filename: 'image.png',
-        //   path: './template/images/reporting.gif',
-        //   cid: 'unique@kreata.ee' //same cid value as in the html img src
-        // }]
       }, function(err, responseStatus) {
         if (err) {
           console.log(err);
@@ -308,7 +302,6 @@ var sendMail = function sendMail(userMail, userPass, emailTo, userName) {
         }
       });
     }
-    // console.log(data);
   });
 };
 
