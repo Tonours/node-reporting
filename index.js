@@ -298,7 +298,7 @@ var sendMail = function sendMail(userMail, userPass, emailTo, userName) {
         if (err) {
           console.log(err);
         } else {
-          console.log(userName+' your email has been success successfully sent, see you soon !');
+          console.log(userName+' your email has been sent, see you soon !');
         }
       });
     }
