@@ -26,5 +26,5 @@ So yes it's not well commented.
 ### Node-mailer and Gmail
 
 I've used node-mailer (gmail service auth) to send emails.
-Gmail mail and password are asked only if you want sent the calendar reporting by email and at each script execution.
+Gmail email and password are asked, only if you want to send the calendar reporting by email and for security reason at each script execution.
 
