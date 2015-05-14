@@ -36,7 +36,7 @@ var questions = function createConfig(){
     {
       type: "confirm",
       name: "agendaCheck",
-      message: "Allright, do you have export your calendar to root folder of the project ? ",
+      message: "Alright, do you have export your calendar to root folder of the project ? ",
       default: true
     }
   ];
