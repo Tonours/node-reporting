@@ -168,12 +168,12 @@ var questions = function createConfig(){
 
 /**
 * Extract data from .ics
-* 
+*
 *
 */
 
 var extractData = function extractData(startDate, endDate, period, userName) {
-  
+
 
   fs.readFile('./calendar.ics','utf8', function (err, calendar) {
     if (err) throw err;
@@ -185,7 +185,7 @@ var extractData = function extractData(startDate, endDate, period, userName) {
     async.each(events, function(data,callback){
 
       if(data.properties.DTSTART[0].value > startDate && data.properties.DTEND[0].value < endDate && data.properties.TRANSP[0].value === 'OPAQUE' ){
-        
+
         var eventLabel  = data.properties.SUMMARY[0].value;
         var eventStart = moment(data.properties.DTSTART[0].value, 'YYYY-M-DD HH:mm:ss');
         var eventEnd   = moment(data.properties.DTEND[0].value, 'YYYY-M-DD HH:mm:ss');
@@ -208,7 +208,7 @@ var extractData = function extractData(startDate, endDate, period, userName) {
       if(err) {
         console.log('There was an error, hmm it\'s embarrassing')
       }else{
-        
+
         events  = {};
         eventsItems = _.groupBy(eventsItems, 'label');
         events.weekNumber = moment().isoWeeks();
@@ -216,7 +216,7 @@ var extractData = function extractData(startDate, endDate, period, userName) {
         events.events = _(eventsItems).map(function(g, key) {
           var d;
           return {
-              label: key, 
+              label: key,
               duration: _(g).reduce(function(m,x) {
                 d = m + x.duration;
                 return m + x.duration;
@@ -249,7 +249,7 @@ var template = function template(events, username) {
 
   events = events || false;
   events.username = username || 'Anonymous';
-  
+
 
   if(events) {
     var template = __dirname + '/template/mail.html.mustache';

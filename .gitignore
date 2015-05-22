@@ -8,7 +8,7 @@ logs
 *.ics
 
 # Template build
-template/build
+template/build/*
 
 # Runtime data
 pids
