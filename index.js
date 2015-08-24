@@ -211,8 +211,9 @@ var extractData = function extractData(startDate, endDate, period, userName) {
 
         events  = {};
         eventsItems = _.groupBy(eventsItems, 'label');
-        events.weekNumber = moment().isoWeeks();
-
+        events.weekNumber = moment(endDate).isoWeeks();
+        console.log(events.weekNumber);
+        
         events.events = _(eventsItems).map(function(g, key) {
           var d;
           return {
